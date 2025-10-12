@@ -57,10 +57,6 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.broker.schema",
-					"match": "^(?=\\s*[^\\s])\\s*(?i)BROKER SCHEMA\\b"
-				},
-				{
 					"name": "keyword.control.esql",
 					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|WHILE|DO|FOR|CALL|RETURN)\\b"
 				},
@@ -173,6 +169,14 @@
 		},
 		"identifiers": {
 			"patterns": [
+				{
+					"name": "entity.other.broker.schema.esql",
+					"match": "\\b(?i)BROKER SCHEMA\\b"
+				},
+				{
+					"name": "entity.other.path..esql",
+					"match": "\\b(?i)PATH\\b"
+				},
 				{			
 					"name": "variable.declaration.esql",
 					"begin": "\\b(?i)DECLARE\\b",
