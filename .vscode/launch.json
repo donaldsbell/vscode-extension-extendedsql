@@ -1,0 +1,32 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+
+		{
+			"name": "Extension",
+			"type": "extensionHost",
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			]
+		},
+		{
+			"name": "Extension with Test Workspace",
+			"type": "extensionHost",
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"${workspaceFolder}/test-workspace"
+			]
+		},
+		{
+			"name": "Extension with FTM Code",
+			"type": "extensionHost",
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"${workspaceFolder}/ftm-test-workspace"
+			]
+		}
+	]
+}

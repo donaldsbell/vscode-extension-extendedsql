@@ -1,0 +1,33 @@
+{
+  "name": "org-github-vscode-extendedsql-language",
+  "displayName": "ESQL (Extended SQL) Language",
+  "description": "Provides ESQL (Extended SQL) language support to Visual Studio Code",
+  "version": "0.0.1",
+  "publisher": "esql-community",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "esql",
+    "query",
+    "sql",
+    "syntax highlighting"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "languages": [{
+      "id": "esql",
+      "aliases": ["Extended SQL", "esql"],
+      "extensions": [".esql"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "esql",
+      "scopeName": "source.extendedsql",
+      "path": "./syntaxes/esql.tmLanguage.json"
+    }]
+  }
+}
