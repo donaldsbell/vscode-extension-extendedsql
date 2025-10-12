@@ -22,7 +22,7 @@
 			"include": "#functions"
 		},
 		{
-			"include": "#booleans"
+			"include": "#constants"
 		},
 		{
 			"include": "#strings"
@@ -110,11 +110,15 @@
 				}
 			]
 		},
-		"booleans": {
+		"constants": {
 			"patterns": [
 				{
-					"name": "constant.boolean.esql",
-					"match": "\\b(?i)(TRUE|FALSE)\\b"
+					"name": "constant.language.boolean.esql",
+					"match": "\\b(?i)(TRUE|FALSE|UNKNOWN)\\b"
+				},
+				{
+					"name": "constant.language.boolean.esql",
+					"match": "\\b(?i)NULL\\b"
 				}
 			]
 		},
@@ -174,14 +178,38 @@
 					"match": "\\b(?i)BROKER SCHEMA\\b"
 				},
 				{
-					"name": "entity.other.path..esql",
+					"name": "entity.other.path.esql",
 					"match": "\\b(?i)PATH\\b"
 				},
 				{			
-					"name": "variable.declaration.esql",
+					"name": "keyword.other.declare.esql",
 					"begin": "\\b(?i)DECLARE\\b",
-					"end": "\\b(BOOLEAN|CHAR|CHARACTER|INTEGER|REFERENCE TO)\\b",
+					"end": ";",
 					"patterns": [
+						{
+							"name": "entity.name.type.boolean.esql",
+							"match": "\\b(?i)BOOLEAN\\b"
+						},
+						{
+							"name": "entity.name.type.datetime.esql",
+							"match": "\\b(?i)(DATE|TIME|GMTTIME|TIMESTAMP|GMTTIMESTAMP|INTERVAL)\\b"
+						},
+						{
+							"name": "entity.name.type.numeric.esql",
+							"match": "\\b(?i)(DECIMAL|FLOAT|INTEGER)\\b"
+						},
+						{
+							"name": "entity.name.type.reference.esql",
+							"match": "\\b(?i)REFERENCE TO\\b"
+						},
+						{
+							"name": "entity.name.type.row.esql",
+							"match": "\\b(?i)ROW\b"
+						},
+						{
+							"name": "entity.name.type.string.esql",
+							"match": "\\b(?i)(BIT|BLOB|CHAR|CHARACTER)\\b"
+						},
 						{
 							"name": "variable.other.esql",
 							"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
