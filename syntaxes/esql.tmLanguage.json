@@ -2,6 +2,12 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"scopeName": "source.extendedsql",
 	"name": "Extended SQL",
+	"_comment": {
+		"line1" :"# Order matters!!!!",
+		"line2": "Matches are performed in the order listed.",
+		"line3": "TextMate considers lines of a document one at a time, looking within each one for matches.",
+		"line4": "When we make a match, that’s the end for everything in that line up to that point.",
+		"line5": "Thus, you can effectively make conditional rules by judicious ordering of a patterns array." },
 	"patterns": [
 		{
 			"include": "#comments"
