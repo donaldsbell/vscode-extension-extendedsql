@@ -115,6 +115,11 @@
 					"match": "\\b(?i)(SQLCODE|SQLERRORTEXT|SQLNATIVEERROR|SQLSTATE)\\b"
 				},
 				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-datetime",
+					"name": "keyword.function.datetime.esql",
+					"match": "\\b(?i)(EXTRACT|CURRENT_DATE|CURRENT_TIME|CURRENT_TIMESTAMP|CURRENT_GMTDATE|CURRENT_GMTTIME|CURRENT_GMTTIMESTAMP|LOCAL_TIMEZONE)\\b"
+				},
+				{
 					"name": "keyword.function.compare.esql",
 					"match": "\\b(?i)(LASTMOVE)\\b"
 				}
