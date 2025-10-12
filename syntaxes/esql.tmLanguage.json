@@ -110,6 +110,7 @@
 					"match": "\\b(?i)(abs|acos|asin|atan|atan2|ceil|cos|cosh|exp|floor|log|log10|pow|round|sin|sinh|sqrt|tan|tanh|max|min|avg|count|sum|concat|length|ltrim|rtrim|substring|trim|upper|lower|split|to_string|to_int|to_long|to_double|to_boolean|to_datetime|date_format|date_parse|now|bucket|case|coalesce|greatest|least|if|isnull|mv_avg|mv_concat|mv_count|mv_dedupe|mv_first|mv_last|mv_max|mv_median|mv_min|mv_sort|mv_sum|mv_zip|st_contains|st_disjoint|st_intersects|st_within|st_x|st_y)\\b"
 				},
 				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-database-state",
 					"name": "keyword.function.database.esql",
 					"match": "\\b(?i)(SQLCODE|SQLERRORTEXT|SQLNATIVEERROR|SQLSTATE)\\b"
 				},
@@ -126,8 +127,17 @@
 					"match": "\\b(?i)(TRUE|FALSE|UNKNOWN)\\b"
 				},
 				{
-					"name": "constant.language.boolean.esql",
+					"name": "constant.language.null.esql",
 					"match": "\\b(?i)NULL\\b"
+				},
+				{
+					"name": "constant.language.messagetree.esql",
+					"match": "\\b(?i)(Environment|InputRoot|OutputRoot)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=reference-esql-constants",
+					"name": "constant.language.parsers.esql",
+					"match": "\\b(?i)(RootBitStream|FolderBitStream|ValidateContentAndValue|ValidateValue|ValidateContent|ValidateNone|ValidateException|ValidateExceptionList|ValidateLocalError|ValidateUserTrace|ParseComplete|ParseImmediate|ParseOnDemand|XMLNSC\\.BuildTreeUsingSchemaTypes|XMLNSC\\.MixedContentRetainAll|XMLNSC\\.CommentsRetainAll|XMLNSC\\.ProcessingInstructionsRetainAll)\\b"
 				}
 			]
 		},
@@ -195,6 +205,10 @@
 					"begin": "\\b(?i)DECLARE\\b",
 					"end": ";",
 					"patterns": [
+						{
+							"comment": "This include was required even though constants are higher in the file",
+							"include": "#constants"
+						},
 						{
 							"name": "entity.name.type.boolean.esql",
 							"match": "\\b(?i)BOOLEAN\\b"
