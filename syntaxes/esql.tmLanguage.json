@@ -211,8 +211,8 @@
 					"end": ";",
 					"patterns": [
 						{
-							"comment": "This include was required even though constants are higher in the file",
-							"include": "#constants"
+							"name": "keyword.other.declare.esql",
+							"match": "\\b(?i)EXTERNAL\\b"
 						},
 						{
 							"name": "entity.name.type.boolean.esql",
@@ -237,6 +237,10 @@
 						{
 							"name": "entity.name.type.string.esql",
 							"match": "\\b(?i)(BIT|BLOB|CHAR|CHARACTER)\\b"
+						},
+						{
+							"comment": "This include was required even though constants are higher in the file",
+							"include": "#constants"
 						},
 						{
 							"name": "variable.other.esql",
