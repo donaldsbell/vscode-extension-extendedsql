@@ -30,8 +30,13 @@ jobs:
             echo "Triggered by tag: $TAG_NAME"
             vsce package "$TAG_NAME"
           else
-            COMMIT_SHA="${GITHUB_SHA}"
-            echo "Triggered by commit: $COMMIT_SHA"
+            BUILD_ID=${{ github.run_number }}
+            VERSION=$(jq -r '.version' package.json)
+            PRERELEASE_VERSION="${VERSION}-build${BUILD_ID}"
+            jq --arg ver "$PRERELEASE_VERSION" '.version = $ver' package.json > tmp.json
+            rm package.json
+            mv tmp.json package.json
+
             vsce package --pre-release
           fi
 
