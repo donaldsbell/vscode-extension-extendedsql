@@ -16,18 +16,30 @@
     "sql",
     "syntax highlighting"
   ],
-  "icon": "icon.png",
+  "icon": "./images/icon.png",
   "contributes": {
-    "languages": [{
-      "id": "esql",
-      "aliases": ["Extended SQL", "esql"],
-      "extensions": [".esql"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "esql",
-      "scopeName": "source.extendedsql",
-      "path": "./syntaxes/esql.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "esql",
+        "aliases": [
+          "Extended SQL",
+          "esql"
+        ],
+        "extensions": [
+          ".esql"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "esql",
+        "scopeName": "source.extendedsql",
+        "path": "./syntaxes/esql.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/donaldsbell/vscode-extension-extendedsql"
   }
 }

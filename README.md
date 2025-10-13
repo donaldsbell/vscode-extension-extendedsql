@@ -1,23 +1,13 @@
 # ESQL Language Support
 
-This is the README for your extension "org-github-vscode-extendedsql-language". After writing up a brief description, we recommend including the following sections.
+This improves the experience of viewing and editing ESQL (Extended SQL) files.
 
 ## Features
 
 This extension provides the following features for ESQL files:
 
-- **Syntax Highlighting**: Full syntax highlighting for ESQL keywords, functions, operators, strings, and comments
-- **Language Configuration**: Proper bracket matching, auto-closing pairs, and comment support
+- **Syntax Highlighting**: Partial syntax highlighting for ESQL keywords, functions, operators, strings, and comments
 - **File Association**: Automatic detection of `.esql` files
-- **Code Formatting**: Proper indentation and formatting support
-
-### Supported ESQL Features
-
-- **Commands**: FROM, WHERE, EVAL, STATS, SORT, LIMIT, KEEP, DROP, RENAME, DISSECT, GROK, ENRICH, LOOKUP, MV_EXPAND, ROW
-- **Operators**: Comparison (==, !=, <, >, <=, >=), Arithmetic (+, -, *, /, %), Logical (AND, OR, NOT)
-- **Functions**: Mathematical, String manipulation, Date/time, Statistical aggregations, Multi-value functions, and more
-- **Data Types**: Numbers, strings (single, double, backtick quoted), booleans, null values
-- **Comments**: Line comments (//) and block comments (/* */)
 
 ## Requirements
 
@@ -27,17 +17,7 @@ This extension provides the following features for ESQL files:
 
 1. Open any file with the `.esql` extension
 2. The extension will automatically provide syntax highlighting and language features
-3. Create new ESQL files and start writing queries with full language support
-
-### Example ESQL Query
-
-```esql
-FROM employees
-| WHERE department == "Engineering"
-| EVAL bonus = salary * 0.1
-| STATS avg_salary = AVG(salary), total_bonus = SUM(bonus) BY department
-| SORT avg_salary DESC
-```
+3. Create new ESQL files and start writing
 
 ## Installation
 
@@ -64,5 +44,3 @@ Initial release of ESQL Language Support:
 MIT License
 
 ---
-
-**Enjoy writing ESQL queries with enhanced language support!**
