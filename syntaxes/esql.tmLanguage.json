@@ -217,7 +217,7 @@
 					"patterns": [
 						{
 							"name": "keyword.other.declare.esql",
-							"match": "\\b(?i)EXTERNAL\\b"
+							"match": "\\b(?i)(SHARED|EXTERNAL)\\b"
 						},
 						{
 							"name": "entity.name.type.boolean.esql",
@@ -226,6 +226,10 @@
 						{
 							"name": "entity.name.type.datetime.esql",
 							"match": "\\b(?i)(DATE|TIME|GMTTIME|TIMESTAMP|GMTTIMESTAMP|INTERVAL)\\b"
+						},
+						{
+							"name": "entity.name.type.namespace.esql",
+							"match": "\\b(?i)NAMESPACE\\b"
 						},
 						{
 							"name": "entity.name.type.numeric.esql",
