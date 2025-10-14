@@ -105,7 +105,7 @@
 				{
 					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-create-function-statement",
 					"name": "keyword.declaration.routine.esql",
-					"match": "\\b(?i)(FUNCTION|PROCEDURE)\\b"
+					"match": "\\b(?i)(FUNCTION|PROCEDURE|RETURNS)\\b"
 				},
 				{
 					"name": "keyword.control.esql",
