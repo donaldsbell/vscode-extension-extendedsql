@@ -109,7 +109,7 @@
 				},
 				{
 					"name": "keyword.control.esql",
-					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|WHILE|DO|FOR|CALL|RETURN)\\b"
+					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|CASE|WHEN|WHILE|DO|FOR|CALL|RETURN)\\b"
 				},
 				{
 					"name": "punctuation.terminator.statement.esql",
@@ -146,7 +146,7 @@
 				},
 				{
 					"name": "keyword.control.assignment.esql",
-					"match": "\\b(?i)(SET|MOVE)\\b"
+					"match": "\\b(?i)(SET|MOVE|ATTACH)\\b"
 				},
 				{
 					"name": "keyword.control.assignment.field.esql",
@@ -254,12 +254,9 @@
 		"identifiers": {
 			"patterns": [
 				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-broker-schema-statement",
 					"name": "entity.other.broker.schema.esql",
-					"match": "\\b(?i)BROKER SCHEMA\\b"
-				},
-				{
-					"name": "entity.other.path.esql",
-					"match": "\\b(?i)PATH\\b"
+					"match": "\\b(?i)(BROKER|SCHEMA|PATH)\\b"
 				},
 				{			
 					"name": "keyword.other.declare.esql",
