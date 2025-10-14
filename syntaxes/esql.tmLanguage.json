@@ -57,11 +57,6 @@
 		"keywords": {
 			"patterns": [
 				{
-					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-create-statement",
-					"name": "keyword.declaration.create.esql",
-					"match": "\\b(?i)CREATE\\b"
-				},
-				{
 					"name": "keyword.other.declaration.qualifier.esql",
 					"match": "\\b(?i)(FIELD|OF)\\b"
 				},
@@ -160,7 +155,7 @@
 				},
 				{
 					"name": "keyword.control.assignment.esql",
-					"match": "\\b(?i)(SET|MOVE|ATTACH)\\b"
+					"match": "\\b(?i)(SET|MOVE|CREATE|ATTACH|DETACH|DELETE)\\b"
 				},
 				{
 					"name": "keyword.control.assignment.field.esql",
