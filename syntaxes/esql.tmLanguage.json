@@ -107,9 +107,19 @@
 					"name": "keyword.declaration.routine.esql",
 					"match": "\\b(?i)(FUNCTION|PROCEDURE|RETURNS)\\b"
 				},
+				{			
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-declare-statement",
+					"name": "keyword.declaration.declare.esql",
+					"match": "\\b(?i)DECLARE\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-declare-handler-statement",
+					"name": "keyword.declaration.handler.esql",
+					"match": "\\b(?i)(HANDLER|FOR)\\b"
+				},
 				{
 					"name": "keyword.control.esql",
-					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|CASE|WHEN|WHILE|DO|FOR|CALL|RETURN)\\b"
+					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|CASE|WHEN|WHILE|DO|FOR|CALL|RETURN|CONTINUE|EXIT|RESIGNAL)\\b"
 				},
 				{
 					"name": "punctuation.terminator.statement.esql",
@@ -126,6 +136,10 @@
 				{
 					"name": "keyword.operator.comparison.complex.esql",
 					"match": "\\b(?i)BETWEEN\\b"
+				},
+				{
+					"name": "keyword.operator.comparison.beforeandafter.esql",
+					"match": "\\b(?i)(BEFORE|AFTER)\\b"
 				},
 				{
 					"name": "keyword.operator.comparison.esql",
@@ -258,52 +272,41 @@
 					"name": "entity.other.broker.schema.esql",
 					"match": "\\b(?i)(BROKER|SCHEMA|PATH)\\b"
 				},
-				{			
-					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-declare-statement",
+				{
 					"name": "keyword.other.declare.esql",
-					"begin": "\\b(?i)DECLARE\\b",
-					"end": ";",
-					"patterns": [
-						{
-							"name": "keyword.other.declare.esql",
-							"match": "\\b(?i)(SHARED|EXTERNAL|CONSTANT|NAME)\\b"
-						},
-						{
-							"name": "entity.name.type.boolean.esql",
-							"match": "\\b(?i)BOOLEAN\\b"
-						},
-						{
-							"name": "entity.name.type.datetime.esql",
-							"match": "\\b(?i)(DATE|TIME|GMTTIME|TIMESTAMP|GMTTIMESTAMP|INTERVAL)\\b"
-						},
-						{
-							"name": "entity.name.type.namespace.esql",
-							"match": "\\b(?i)NAMESPACE\\b"
-						},
-						{
-							"name": "entity.name.type.numeric.esql",
-							"match": "\\b(?i)(DECIMAL|FLOAT|INTEGER)\\b"
-						},
-						{
-							"name": "entity.name.type.reference.esql",
-							"match": "\\b(?i)REFERENCE TO\\b"
-						},
-						{
-							"name": "entity.name.type.row.esql",
-							"match": "\\b(?i)ROW\b"
-						},
-						{
-							"name": "entity.name.type.string.esql",
-							"match": "\\b(?i)(BIT|BLOB|CHAR|CHARACTER)\\b"
-						},
-						{
-							"comment": "This include was required even though constants are higher in the file",
-							"include": "#constants"
-						},
-						{
-							"include": "#variables"
-						}
-					]
+					"match": "\\b(?i)(SHARED|EXTERNAL|CONSTANT|NAME)\\b"
+				},
+				{
+					"name": "entity.name.type.boolean.esql",
+					"match": "\\b(?i)BOOLEAN\\b"
+				},
+				{
+					"name": "entity.name.type.datetime.esql",
+					"match": "\\b(?i)(DATE|TIME|GMTTIME|TIMESTAMP|GMTTIMESTAMP|INTERVAL)\\b"
+				},
+				{
+					"name": "entity.name.type.namespace.esql",
+					"match": "\\b(?i)NAMESPACE\\b"
+				},
+				{
+					"name": "entity.name.type.numeric.esql",
+					"match": "\\b(?i)(DECIMAL|FLOAT|INTEGER)\\b"
+				},
+				{
+					"name": "entity.name.type.reference.esql",
+					"match": "\\b(?i)REFERENCE TO\\b"
+				},
+				{
+					"name": "entity.name.type.row.esql",
+					"match": "\\b(?i)ROW\b"
+				},
+				{
+					"name": "entity.name.type.string.esql",
+					"match": "\\b(?i)(BIT|BLOB|CHAR|CHARACTER)\\b"
+				},
+				{
+					"comment": "This include was required even though constants are higher in the file",
+					"include": "#constants"
 				},
 				{
 					"include": "#variables"
