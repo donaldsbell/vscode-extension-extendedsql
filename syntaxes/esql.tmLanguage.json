@@ -57,6 +57,25 @@
 		"keywords": {
 			"patterns": [
 				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-module-statement",
+					"name": "keyword.declaration.module.begin.esql",
+					"match": "\\b(?i)CREATE (COMPUTE|DATABASE|FILTER|DATABASEEVENT) MODULE\\b"
+				},
+				{
+					"name": "keyword.declaration.module.end.esql",
+					"match": "\\b(?i)END MODULE\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-function-statement",
+					"name": "keyword.declaration.routine.begin.esql",
+					"match": "\\b(?i)CREATE (FUNCTION|PROCEDURE)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-function-statement",
+					"name": "keyword.declaration.routine.end.esql",
+					"match": "\\b(?i)END (FUNCTION|PROCEDURE)\\b"
+				},
+				{
 					"name": "keyword.control.esql",
 					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|WHILE|DO|FOR|CALL|RETURN)\\b"
 				},
