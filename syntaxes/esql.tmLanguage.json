@@ -156,10 +156,6 @@
 				{
 					"name": "keyword.control.assignment.esql",
 					"match": "\\b(?i)(SET|MOVE|CREATE|ATTACH|DETACH|DELETE)\\b"
-				},
-				{
-					"name": "keyword.control.assignment.field.esql",
-					"match": "\\b(?i)(PREVIOUSSIBLING|NEXTSIBLING|FIRSTCHILD|LASTCHILD)\\b"
 				}
 			]
 		},
@@ -298,6 +294,10 @@
 				{
 					"name": "entity.name.type.string.esql",
 					"match": "\\b(?i)(BIT|BLOB|CHAR|CHARACTER)\\b"
+				},
+				{
+					"name": "entity.name.tag.esql",
+					"match": "\\b(?i)(PREVIOUSSIBLING|NEXTSIBLING|FIRSTCHILD|LASTCHILD)\\b"
 				},
 				{
 					"comment": "This include was required even though constants are higher in the file",
