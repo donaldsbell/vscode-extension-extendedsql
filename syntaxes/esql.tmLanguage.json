@@ -57,7 +57,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-statement",
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-create-statement",
 					"name": "keyword.declaration.create.esql",
 					"match": "\\b(?i)CREATE\\b"
 				},
@@ -94,7 +94,7 @@
 					"match": "\\b(?i)OPTIONS\\b"
 				},
 				{
-					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-module-statement",
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-create-module-statement",
 					"name": "keyword.declaration.module.esql",
 					"match": "\\b(?i)(COMPUTE|DATABASE|FILTER|DATABASEEVENT|MODULE)\\b"
 				},
@@ -103,7 +103,7 @@
 					"match": "\\b(?i)END\\s+MODULE\\b"
 				},
 				{
-					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-function-statement",
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-create-function-statement",
 					"name": "keyword.declaration.routine.esql",
 					"match": "\\b(?i)(FUNCTION|PROCEDURE)\\b"
 				},
@@ -259,13 +259,14 @@
 					"match": "\\b(?i)(BROKER|SCHEMA|PATH)\\b"
 				},
 				{			
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=statements-declare-statement",
 					"name": "keyword.other.declare.esql",
 					"begin": "\\b(?i)DECLARE\\b",
 					"end": ";",
 					"patterns": [
 						{
 							"name": "keyword.other.declare.esql",
-							"match": "\\b(?i)(SHARED|EXTERNAL)\\b"
+							"match": "\\b(?i)(SHARED|EXTERNAL|CONSTANT|NAME)\\b"
 						},
 						{
 							"name": "entity.name.type.boolean.esql",
