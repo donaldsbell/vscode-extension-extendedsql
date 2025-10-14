@@ -57,23 +57,55 @@
 		"keywords": {
 			"patterns": [
 				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-statement",
+					"name": "keyword.declaration.create.esql",
+					"match": "\\b(?i)CREATE\\b"
+				},
+				{
+					"name": "keyword.other.declaration.qualifier.esql",
+					"match": "\\b(?i)(FIELD|OF)\\b"
+				},
+				{
+					"name": "keyword.other.declaration.as.esql",
+					"match": "\\b(?i)AS\\b"
+				},
+				{
+					"name": "keyword.other.declaration.domain.esql",
+					"match": "\\b(?i)DOMAIN\\b"
+				},
+				{
+					"name": "keyword.other.declaration.value.esql",
+					"match": "\\b(?i)VALUE\\b"
+				},
+				{
+					"name": "keyword.other.declaration.name.esql",
+					"match": "\\b(?i)(TYPE|NAMESPACE|NAME|IDENTITY)\\b"
+				},
+				{
+					"name": "keyword.other.declaration.from.esql",
+					"match": "\\b(?i)FROM\\b"
+				},
+				{
+					"name": "keyword.other.declaration.parse.esql",
+					"match": "\\b(?i)(PARSE|ENCODING|CCSID|SET|TYPE|FORMAT)\\b"
+				},
+				{
+					"name": "keyword.other.declaration.options.esql",
+					"match": "\\b(?i)OPTIONS\\b"
+				},
+				{
 					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-module-statement",
-					"name": "keyword.declaration.module.begin.esql",
-					"match": "\\b(?i)CREATE (COMPUTE|DATABASE|FILTER|DATABASEEVENT) MODULE\\b"
+					"name": "keyword.declaration.module.esql",
+					"match": "\\b(?i)(COMPUTE|DATABASE|FILTER|DATABASEEVENT|MODULE)\\b"
 				},
 				{
 					"name": "keyword.declaration.module.end.esql",
-					"match": "\\b(?i)END MODULE\\b"
+					"match": "\\b(?i)END\\s+MODULE\\b"
 				},
 				{
 					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-function-statement",
-					"name": "keyword.declaration.routine.begin.esql",
-					"match": "\\b(?i)CREATE (FUNCTION|PROCEDURE)\\b"
-				},
-				{
-					"comment": "https://www.ibm.com/docs/en/app-connect/12.0.x?topic=statements-create-function-statement",
-					"name": "keyword.declaration.routine.end.esql",
-					"match": "\\b(?i)END (FUNCTION|PROCEDURE)\\b"
+					"name": "keyword.declaration.routine.esql",
+					"match": "\\b(?i)(FUNCTION|PROCEDURE)\\b"
 				},
 				{
 					"name": "keyword.control.esql",
@@ -117,8 +149,8 @@
 					"match": "\\b(?i)(SET|MOVE)\\b"
 				},
 				{
-					"name": "keyword.control.assignment.create.esql",
-					"match": "\\b(?i)(SET|CREATE (FIRSTCHILD|NEXTSIBLING|LASTCHILD)|OF|AS|NAME)\\b"
+					"name": "keyword.control.assignment.field.esql",
+					"match": "\\b(?i)(PREVIOUSSIBLING|NEXTSIBLING|FIRSTCHILD|LASTCHILD)\\b"
 				}
 			]
 		},
@@ -271,11 +303,17 @@
 							"include": "#constants"
 						},
 						{
-							"name": "variable.other.esql",
-							"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+							"include": "#variables"
 						}
 					]
 				},
+				{
+					"include": "#variables"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
 				{
 					"name": "variable.other.esql",
 					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
