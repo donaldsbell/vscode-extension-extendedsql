@@ -77,8 +77,8 @@
 					"match": "\\b(?i)(TYPE|NAMESPACE|NAME|IDENTITY)\\b"
 				},
 				{
-					"name": "keyword.other.declaration.from.esql",
-					"match": "\\b(?i)FROM\\b"
+					"name": "keyword.other.declaration.location.esql",
+					"match": "\\b(?i)(FROM|INTO)\\b"
 				},
 				{
 					"name": "keyword.other.declaration.parse.esql",
@@ -114,7 +114,19 @@
 				},
 				{
 					"name": "keyword.control.esql",
-					"match": "\\b(?i)(BEGIN|END|IF|THEN|ELSE|CASE|WHEN|WHILE|DO|FOR|CALL|RETURN|CONTINUE|EXIT|RESIGNAL)\\b"
+					"match": "\\b(?i)(BEGIN|END|CALL|RETURN|CONTINUE|EXIT|RESIGNAL)\\b"
+				},
+				{
+					"name": "keyword.control.conditional.esql",
+					"match": "\\b(?i)(IF|THEN|ELSE|CASE|WHEN)\\b"
+				},
+				{
+					"name": "keyword.control.iterate.esql",
+					"match": "\\b(?i)(FOR|WHILE|DO|ITERATE|REPEAT|UNTIL)\\b"
+				},
+				{
+					"name": "keyword.other.eval.esql",
+					"match": "\\b(?i)EVAL\\b"
 				},
 				{
 					"name": "punctuation.terminator.statement.esql",
@@ -155,7 +167,7 @@
 				},
 				{
 					"name": "keyword.control.assignment.esql",
-					"match": "\\b(?i)(SET|MOVE|CREATE|ATTACH|DETACH|DELETE)\\b"
+					"match": "\\b(?i)(SET|MOVE|CREATE|ATTACH|DETACH|DELETE|INSERT)\\b"
 				}
 			]
 		},
