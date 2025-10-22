@@ -188,9 +188,9 @@
 					"match": "\\b(?i)(EXTRACT|CURRENT_DATE|CURRENT_TIME|CURRENT_TIMESTAMP|CURRENT_GMTDATE|CURRENT_GMTTIME|CURRENT_GMTTIMESTAMP|LOCAL_TIMEZONE)\\b"
 				},
 				{
-					"comment": "TODO NEXT: https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-opentelemetry",
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-opentelemetry",
 					"name": "keyword.function.opentelemetry.esql",
-					"match": "\\b(?i)(OTEL_CREATE_TRACER|OTEL)\\b"
+					"match": "\\b(?i)(OTEL_CREATE_TRACER|OPENTELEMETRY_SPAN_ID|OPENTELEMETRY_TRACE_PARENT|OPENTELEMETRY_TRACE_STATE)\\b"
 				},
 				{
 					"name": "keyword.function.compare.esql",
