@@ -232,6 +232,26 @@
 					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-asbitstream-function",
 					"name": "keyword.control.function.field.asbitstream.esql",
 					"match": "\\b(?i)(OPTIONS|ENCODING|CCSID|TYPE|FORMAT)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-list",
+					"name": "keyword.other.function.list.esql",
+					"match": "\\b(?i)(CARDINALITY|EXISTS|SINGULAR|THE)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-context-tree",
+					"name": "keyword.other.function.context.esql",
+					"match": "\\b(?i)CONTEXTREFERENCE\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-complex-esql",
+					"name": "keyword.other.function.complex.esql",
+					"match": "\\b(?i)(CASE|CAST|SELECT|ROW|LIST)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-miscellaneous-esql",
+					"name": "keyword.other.function.misc.esql",
+					"match": "\\b(?i)(BASE64DECODE|BASE64ENCODE|CHANGEIDENTIFIERTIMEOUT|COALESCE|EVAL|INSTANCESTOPPING|NULLIF|PASSTHRU|SLEEP|UUIDASBLOB|UIDASCHAR)\\b"
 				}
 			]
 		},
