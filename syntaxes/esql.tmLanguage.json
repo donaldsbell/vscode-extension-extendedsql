@@ -163,7 +163,7 @@
 				},
 				{
 					"name": "keyword.operator.assignment.esql",
-					"match": "="
+					"match": "(=|\\bTO\\b)"
 				},
 				{
 					"name": "keyword.control.assignment.esql",
@@ -191,6 +191,36 @@
 					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-opentelemetry",
 					"name": "keyword.function.opentelemetry.esql",
 					"match": "\\b(?i)(OTEL_CREATE_TRACER|OPENTELEMETRY_SPAN_ID|OPENTELEMETRY_TRACE_PARENT|OPENTELEMETRY_TRACE_STATE)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-numeric",
+					"name": "keyword.function.numeric.esql",
+					"match": "\\b(?i)(ABS|ABSVAL|ACOS|ASIN|ATAN|ATAN2|BITAND|BITNOT|BITOR|BITXOR|CEIL|CEILING|COS|COSH|COT|DEGREES|EXP|FLOOR|LN|LOG|LOG10|MOD|POWER|RADIANS|RAND|ROUND|SIGN|SIN|SINH|SQRT|TAN|TANH|TRUNCATE)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-round-function",
+					"name": "keyword.other.function.numeric.round.esql",
+					"match": "\\b(?i)(MODE|ROUND_UP|ROUND_DOWN|ROUND_CEILING|ROUND_FLOOR|ROUND_HALF_UP|ROUND_HALF_EVEN|ROUND_HALF_DOWN)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-string-manipulation",
+					"name": "keyword.function.string.esql",
+					"match": "\\b(?i)(CONTAINS|ENDSWITH|LEFT|LENGTH|LOWER|LCASE|LTRIM|OVERLAY|POSITION|REPLACE|REPLICATE|RIGHT|RTRIM|SPACE|STARTSWITH|SUBSTRING|TRANSLATE|TRIM|UPPER|UCASE|URLDECODE|URLENCODE)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-overlay-function",
+					"name": "keyword.other.function.string.overlay.esql",
+					"match": "\\b(?i)PLACING\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-trim-function",
+					"name": "keyword.other.function.string.trim.esql",
+					"match": "\\b(?i)(BOTH|LEADING|TRAILING)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-urlencode-function",
+					"name": "keyword.other.function.string.urlencode.esql",
+					"match": "\\b(?i)MODE\\b"
 				},
 				{
 					"name": "keyword.function.compare.esql",
@@ -278,6 +308,11 @@
 				{
 					"name": "keyword.other.declare.esql",
 					"match": "\\b(?i)(SHARED|EXTERNAL|CONSTANT|NAME)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-urlencode-function",
+					"name": "entity.other.function.string.urlencode.esql",
+					"match": "\\b(?i)(RFC3986|RFC1798)\\b"
 				},
 				{
 					"name": "entity.name.type.boolean.esql",
