@@ -114,7 +114,7 @@
 				},
 				{
 					"name": "keyword.control.esql",
-					"match": "\\b(?i)(BEGIN|END|CALL|RETURN|CONTINUE|EXIT|RESIGNAL)\\b"
+					"match": "\\b(?i)(BEGIN|END|CALL|RETURN|CONTINUE|EXIT|RESIGNAL|THROW|PROPAGATE)\\b"
 				},
 				{
 					"name": "keyword.control.conditional.esql",
@@ -168,7 +168,7 @@
 				},
 				{
 					"name": "keyword.operator.assignment.esql",
-					"match": "(=|\\bTO\\b)"
+					"match": "(=|\\b(TO|VALUES)\\b)"
 				},
 				{
 					"name": "keyword.control.assignment.esql",
@@ -348,6 +348,10 @@
 				{
 					"name": "entity.name.type.datetime.esql",
 					"match": "\\b(?i)(DATE|TIME|GMTTIME|TIMESTAMP|GMTTIMESTAMP|INTERVAL)\\b"
+				},
+				{
+					"name": "entity.name.type.exception.esql",
+					"match": "\\b(?i)EXCEPTION\\b"
 				},
 				{
 					"name": "entity.name.type.namespace.esql",
