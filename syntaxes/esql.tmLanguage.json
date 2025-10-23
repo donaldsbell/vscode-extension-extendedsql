@@ -149,6 +149,11 @@
 					"match": "\\b(?i)(BEFORE|AFTER)\\b"
 				},
 				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-function",
+					"name": "keyword.operator.comparison.for.esql",
+					"match": "\\b(?i)(ALL|ANY|SOME)\\b"
+				},
+				{
 					"name": "keyword.operator.comparison.esql",
 					"match": "(==|!=|<=|>=|<|>)"
 				},
@@ -173,10 +178,6 @@
 		},
 		"functions": {
 			"patterns": [
-				{
-					"name": "entity.name.function.esql",
-					"match": "\\b(?i)(abs|acos|asin|atan|atan2|ceil|cos|cosh|exp|floor|log|log10|pow|round|sin|sinh|sqrt|tan|tanh|max|min|avg|count|sum|concat|length|ltrim|rtrim|substring|trim|upper|lower|split|to_string|to_int|to_long|to_double|to_boolean|to_datetime|date_format|date_parse|now|bucket|case|coalesce|greatest|least|if|isnull|mv_avg|mv_concat|mv_count|mv_dedupe|mv_first|mv_last|mv_max|mv_median|mv_min|mv_sort|mv_sum|mv_zip|st_contains|st_disjoint|st_intersects|st_within|st_x|st_y)\\b"
-				},
 				{
 					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-database-state",
 					"name": "keyword.function.database.esql",
@@ -209,12 +210,12 @@
 				},
 				{
 					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-overlay-function",
-					"name": "keyword.other.function.string.overlay.esql",
+					"name": "keyword.control.function.string.overlay.esql",
 					"match": "\\b(?i)PLACING\\b"
 				},
 				{
 					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-trim-function",
-					"name": "keyword.other.function.string.trim.esql",
+					"name": "keyword.control.function.string.trim.esql",
 					"match": "\\b(?i)(BOTH|LEADING|TRAILING)\\b"
 				},
 				{
@@ -223,8 +224,14 @@
 					"match": "\\b(?i)MODE\\b"
 				},
 				{
-					"name": "keyword.function.compare.esql",
-					"match": "\\b(?i)(LASTMOVE)\\b"
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-esql-field",
+					"name": "keyword.other.function.field.esql",
+					"match": "\\b(?i)(ASBITSTREAM|BITSTREAM|FIELDNAME|FIELDNAMESPACE|FIELDTYPE|FIELDVALUE|FOR|LASTMOVE|SAMEFIELD)\\b"
+				},
+				{
+					"comment": "https://www.ibm.com/docs/en/app-connect/13.0.x?topic=functions-asbitstream-function",
+					"name": "keyword.control.function.field.asbitstream.esql",
+					"match": "\\b(?i)(OPTIONS|ENCODING|CCSID|TYPE|FORMAT)\\b"
 				}
 			]
 		},
