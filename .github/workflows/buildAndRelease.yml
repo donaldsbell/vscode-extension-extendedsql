@@ -25,10 +25,11 @@ jobs:
           env |sort
           pwd
           ls -la
-          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
             TAG_NAME="${GITHUB_REF#refs/tags/}"
-            echo "Triggered by tag: $TAG_NAME"
-            vsce package "$TAG_NAME"
+            echo "Triggered by tag: ${TAG_NAME}"
+            VERSION_FROM_TAG_NAME="${TAG_NAME#v}"
+            vsce package --no-git-tag-version "${VERSION_FROM_TAG_NAME}"
           else
             BUILD_ID=${{ github.run_number }}
             VERSION=$(jq -r '.version' package.json)

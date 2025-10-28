@@ -2,7 +2,7 @@
   "name": "org-github-vscode-extendedsql-language",
   "displayName": "ESQL (Extended SQL) Language",
   "description": "Provides ESQL (Extended SQL) language support to Visual Studio Code",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "publisher": "esql-community",
   "engines": {
     "vscode": "^1.105.0"
